@@ -4,7 +4,9 @@
 
 BatteryBar puts your battery percentage in the system tray. Hover for charging or discharging power, estimated time remaining, and time weighted averages over the last 1, 5, 10, and 30 minutes. Choose between two icon layouts, customize colors and thresholds, and optionally start it at sign in.
 
-![BatteryBar icon styles at several battery levels](docs/icon-preview.png)
+![Actual BatteryBar settings window showing four battery states and color controls](docs/settings-preview.png)
+
+*Actual settings window (Chinese interface).*
 
 ## Quick start
 
