@@ -1,0 +1,22 @@
+name: Publish initial release
+
+on:
+  push:
+    paths:
+      - .github/workflows/publish-initial-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish v0.1.0
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! gh release view v0.1.0 >/dev/null 2>&1; then
+            gh release create v0.1.0 dist/BatteryBar.exe --title "BatteryBar v0.1.0" --notes-file docs/release-notes-v0.1.0.md --target "$GITHUB_SHA"
+          fi
