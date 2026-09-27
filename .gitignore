@@ -1,0 +1,6 @@
+dist/icon-check.png
+dist/popup-*.png
+*.pdb
+*.obj
+*.tmp
+.vs/
